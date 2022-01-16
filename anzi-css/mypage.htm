@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/common.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/animation.css">
+  <style>
+    header {
+      text-align: center;
+      margin-top: 75px;
+    }
+
+    header .thumb-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 36px;
+    }
+
+    header .thumb {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    header .badge {
+      width: 28px;
+      height: 28px;
+      font-size: 12px;
+      position: absolute;
+      background-color: #ff5500;
+      border-radius: 50%;
+      top: 0;
+      right: -8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: scaleUp 0.5s;
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation-fill-mode: both;
+      animation-delay: 0.5s;
+    }
+
+    header .greeting {
+      margin-bottom: 10px;
+    }
+
+    header .mail {
+      margin-top: 20px;
+      padding: 8px 22px 10px 22px;
+      background-color: rgba(0, 0, 0, 0.05);
+      display: inline-block;
+      border-radius: 20px;
+      /*border: 1px solid rgba(0, 0, 0, 0.08);*/
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+      box-sizing: border-box;
+    }
+
+    .list {
+      margin-top: 40px;
+    }
+
+    .list .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .list .item .left {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    .list.item .left .name {
+      margin-left: 6px;
+    }
+
+    .list .item .right {
+      opacity: 0.5;
+    }
+
+    .list .item img {
+      padding: 20px 22px;
+    }
+
+    .list .item .right img {
+      padding-left: 14px;
+    }
+
+    .text-area {
+      animation: showText 1s;
+      animation-fill-mode: both;
+    }
+
+    .modal-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(5%, 5%);
+    }
+
+    .modal-inner {
+      width: calc(100% - 48px);
+      background-color: white;
+      background-color: #485861;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .modal-inner .thumb {
+      height: 234px;
+      background-color: white;
+      background-image: url(./img/likes-3.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .bottom-info .title {
+      font-size: 17px;
+    }
+
+    .bottom-info .description {
+      margin-top: 4px;
+      line-height: 19px;
+      font-size: 12px;
+    }
+
+    .bottom-info button {
+      padding: 10px 20px;
+      font-size: 15px;
+      border: 1px solid rgba(255, 230, 207, 0.28);
+      border-radius: 4px;;
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+    }
+
+    .bottom-info {
+      height: 212px;
+      padding: 24px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+
+    .overlay {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      animation: fadeIn 3s;
+      animation-fill-mode: both;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="thumb-wrapper">
+      <a href="./mypage-modal.htm"><img class="thumb" src="./img/user-thumb.png"></a>
+      <div class="badge">7</div>
+    </div>
+    <div class="text-area stagger-item">
+      <h2 class="greeting stagger-item">Hi, Mary Jane</h2>
+      <div class="desc stagger-item">
+        we'll make a mobile magazine <br>
+        using html, css only.
+      </div>
+    </div>
+    <div class="mail mouse-effect stagger-item"><a href="mailto:thanksLee@gmail.com">thanks@naver.com</a></div>
+  </header>
+  <ul class="list">
+    <li class="item mouse-effect stagger-item">
+      <div class="left">
+        <img src="./img/icon/bookmark.svg" alt="">
+        <div class="name">Bookmark</div>
+      </div>
+      <div class="right">
+        <img src="./img/icon/right_arrow.svg" alt="">
+      </div>
+    </li>
+    <li class="item mouse-effect stagger-item">
+      <div class="left">
+        <img src="./img/icon/account.svg" alt="">
+        <div class="name">account</div>
+      </div>
+      <div class="right">
+        <img src="./img/icon/right_arrow.svg" alt="">
+      </div>
+    </li>
+    <li class="item mouse-effect stagger-item">
+      <div class="left">
+        <img src="./img/icon/business.svg"">
+        <div class="name">business</div>
+      </div>
+      <div class="right">
+        <img src="./img/icon/right_arrow.svg" alt="">
+      </div>
+    </li>
+    <li class="item mouse-effect stagger-item">
+      <div class="left">
+        <img src="./img/icon/puzzle.svg" alt="">
+        <div class="name">Blah Blah</div>
+      </div>
+      <div class="right">
+        <img src="./img/icon/right_arrow.svg" alt="">
+      </div>
+    </li>
+  </ul>
+
+  <nav class="gnb">
+    <a href="./index.htm" class="cover mouse-effect">
+      <img src="./img/icon/cover.svg" alt="">
+    </a>
+    <a href="./issue.htm" class="issue mouse-effect">
+      <img src="./img/icon/issue.svg" alt="">
+    </a>
+    <a href="./like-grid.htm" class="like mouse-effect">
+      <img src="./img/icon/like.svg" alt="">
+    </a>
+    <a href="./mypage.htm" class="my mouse-effect active">
+      <img src="./img/icon/more.svg" alt="">
+    </a>
+  </nav>
+</body>
+</html>

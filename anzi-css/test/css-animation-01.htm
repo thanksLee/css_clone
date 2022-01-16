@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animation</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/common.css">
+  <style>
+    @keyframes show {
+      from {
+        background-color: yellow;
+      }
+
+      to {
+        background-color: green;
+      }
+    }
+
+    .element {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      /*
+      animation-name: show;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      */
+      animation: show 3s forwards
+    }
+
+    .element:hover {
+      background-color: blue;
+      transition: 1s;
+    }
+
+    .parent {
+      perspective: 200px;
+    }
+
+    .element-transition {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin: 0 auto;
+    }
+
+    .element-transition:hover {
+      width: 100px;
+      transition: 2s;
+      /*
+      transform: scaleX(2)
+      */
+      /*
+      transform: translateX(100px) scaleX(2)
+      */
+      /*
+      transform: translateY(100px) scaleX(2)
+      */
+      /*
+      transform: translateZ(100px) scaleX(2)
+      */
+      /*
+      transform: translate3d(30px, 100px, 50px);
+      */
+      transform: skew(20deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="element"></div>
+
+  <div class="parent">
+    <div class="element-transition"></div>
+  </div>
+</body>
+</html>

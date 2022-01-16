@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <style>
+    .wrapper {
+      display: grid;
+      /*grid-template-columns: 40% 40% 20%;*/
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 24px;
+      grid-row-gap: 12px;
+      grid-auto-rows: minmax(100px, auto);
+    }
+
+    .item {
+      background-color: beige;
+      border: 1px solid red
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="item">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</div>
+    <div class="item">Lorem Ipsum</div>
+    <div class="item">Lorem Ipsum</div>
+    <div class="item">Lorem Ipsum</div>
+    <div class="item">Lorem Ipsum</div>
+    <div class="item">Lorem Ipsum</div>
+    <div class="item">Lorem Ipsum</div>
+    <div class="item">Lorem Ipsum</div>
+    <div class="item">Lorem Ipsum</div>
+    <div class="item">Lorem Ipsum</div>
+    <div class="item">Lorem Ipsum</div>
+    <div class="item">Lorem Ipsum</div>
+  </div>
+</body>
+</html>

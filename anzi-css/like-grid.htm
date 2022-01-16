@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIKE</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/common.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/animation.css">
+  <style>
+    .search {
+      margin: 20px;
+      position: relative;
+      animation: slideDown 1s;
+      animation-fill-mode: both;
+    }
+
+    .search form {
+      display: flex;
+    }
+
+    .search form:hover .search-icon {
+      opacity: 1;
+    }
+
+    .search .field-search {
+      width: 100%;
+      flex-shrink: 0;
+      transition: 0.5s;
+    }
+
+    .search .field-search:focus {
+      width: 80%;
+      flex-shrink: initial;
+    }
+
+    .search .field-search:focus ~ .btn-cancel {
+      opacity: 1;
+    }
+
+    .search .btn-cancel {
+      flex-shrink: 0;
+      margin-left: 20px;
+      opacity: 0;
+    }
+
+    .search .search-icon {
+      position:absolute;
+      left: 12px;
+      top: 12px;
+      opacity: 0.3;
+      transition: 0.2s;
+    }
+
+    .search input  {
+      width: 100%;
+    }
+
+    .text-area {
+      margin: 24px;
+      margin-top: 124px;
+      margin-bottom: 12px;
+      animation: showText 1s;
+      animation-fill-mode: both;
+    }
+
+    .text-area .desc {
+      margin-top: 24px;
+    }
+
+    .list {
+      font-size: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 148px;
+      grid-column-gap: 17px;
+      grid-row-gap: 18px;
+      padding: 24px;
+    }
+
+    .list .item {
+      background-color: red;
+      background-size: cover;
+      background-position: center;
+      border-radius: 5px;
+      animation: showItem 0.5s;
+      animation-fill-mode: both;
+    }
+
+    .list .item:nth-child(1) {
+      background-image: url(./img/likes-1.jpg);
+      animation-delay: 0.2s;
+    }
+    .list .item:nth-child(2) {
+      background-image: url(./img/likes-2.jpg);
+      animation-delay: 0.25s;
+    }
+    .list .item:nth-child(3) {
+      background-image: url(./img/likes-3.jpg);
+      animation-delay: 0.3s;
+    }
+    .list .item:nth-child(4) {
+      background-image: url(./img/likes-4.jpg);
+      animation-delay: 0.35s;
+    }
+    .list .item:nth-child(5) {
+      background-image: url(./img/likes-1.jpg);
+      animation-delay: 0.4s;
+    }
+    .list .item:nth-child(6) {
+      background-image: url(./img/likes-2.jpg);
+      animation-delay: 0.45s;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 검색 영역 -->
+  <form>
+    <header class="search">
+      <input class="field-search" type="text" placeholder="Search" />
+      <button class="btn-cancel">취소</button>
+    <img class="search-icon" src="./img/icon/search.svg">
+    </header>
+  </form>
+
+  <!-- 텍스트 영역 -->
+  <div class="text-area stagger-item">
+    <h1 class="stagger-item">Likes 72</h1>
+    <div class="desc stagger-item">
+      We'll make a mobile maazine app <br>
+      using html, css only.
+    </div>
+  </div>
+
+  <!-- 콜렉션 뷰 -->
+  <ul class="list">
+    <li class="item"></li>
+    <li class="item"></li>
+    <li class="item"></li>
+    <li class="item"></li>
+    <li class="item"></li>
+    <li class="item"></li>
+  </ul>
+
+  <nav class="gnb">
+    <a href="./index.htm" class="cover mouse-effect">
+      <img src="./img/icon/cover.svg" alt="">
+    </a>
+    <a href="./issue.htm" class="issue mouse-effect">
+      <img src="./img/icon/issue.svg" alt="">
+    </a>
+    <a href="./like-grid.htm" class="like mouse-effect active">
+      <img src="./img/icon/like.svg" alt="">
+    </a>
+    <a href="./mypage.htm" class="my mouse-effect">
+      <img src="./img/icon/more.svg" alt="">
+    </a>
+  </nav>
+
+</body>
+</html>
