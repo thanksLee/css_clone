@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Website - Easy Tutorials</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <img src="./images/logo.png" alt="logo" class="log">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SPECIFICATIONS</a></li>
+        <li><a href="#">PRODUCTS</a></li>
+        <li><a href="#">CONNECT</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div class="left-col">
+      <h1>THE<br>REAL<br>SOUND</h1>
+    </div>
+    <div class="right-container">
+      <div class="right-col">
+        <p>click here to listen</p>
+        <img src="./images/pause.png" alt="" class="audio-player" id="audio_pause">
+        <img src="./images/play.png" alt="" class="audio-player" id="audio_play">
+        <img src="./images/stop.png" alt="" class="audio-player" id="audio_stop">
+      </div>
+      <div class="right-col">
+        <p>click here to listen</p>
+        <img src="./images/play.png" alt="" class="audio-player" id="audio_icon">
+      </div>
+    </div>
+  </div>
+
+  <audio id="mySong">
+    <source src="./images/[어쩌다 발견한 하루OST] Extraordinary You OST Part18.mp3" type="audio/mp3">
+  </audio>
+<script>
+  var mySong = document.getElementById("mySong");
+  var audio_pause = document.getElementById("audio_pause") ;
+  var audio_play  = document.getElementById("audio_play") ;
+  var audio_stop  = document.getElementById("audio_stop") ;
+
+  var audio_icon = document.getElementById("audio_icon");
+
+  audio_pause.onclick = function() {
+    mySong.pause();
+  }
+
+  audio_play.onclick = function() {
+    mySong.play();
+  }
+
+  audio_stop.onclick = function() {
+    mySong.pause();
+    mySong.currentTime = 0;
+  }
+
+  audio_icon.onclick = function() {
+    if (mySong.paused) {
+      mySong.play();
+      audio_icon.src = "./images/pause.png";
+    } else {
+      mySong.pause();
+      audio_icon.src = "./images/play.png";
+    }
+  }
+</script>
+</body>
+</html>

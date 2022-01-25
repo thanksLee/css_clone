@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../common.css">
+    <style>
+      body {
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        background: linear-gradient(0deg, #f2f2f2 50%, #333 50%);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .container {
+        height: 402px;
+        width: 254px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .container .login-form, .sign-up-form {
+        width: 250px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 1px 1px 5px black;
+        text-align: center;
+        line-height: 50px;
+        margin-left: 2px;
+        translate: 0.3s cubic-bezier(1, 0.09, 0.19, 1.17);
+      }
+
+      .container .login-form {
+        height: 300px;
+        transform: translateX(0px);
+      }
+
+      .container .sign-up-form {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 400px;
+        transform: translateX(255px)
+      }
+
+      .container .box {
+        padding: 10px;
+        margin-top: 30px;
+        border-bottom: 2.4px solid black;
+      }
+
+      .container .box:focus {
+        border-color: green;
+      }
+
+      .container button {
+        height: 40px;
+        width: 200px;
+        cursor:pointer;
+        margin-top: 80px;
+        border-radius: 30px;
+      }
+
+      .container button:hover {
+        background-color: deeppink;
+        color: white;
+      }
+
+      .container .login-form button {
+        margin-top: 25px;
+      }
+
+      .switch-buttons {
+        position: absolute;
+        top: 50px;
+      }
+
+      .switch-buttons input[type="button"] {
+        color: gray;
+        cursor: pointer;
+        background: none;
+        padding: 5px;
+        margin: 10px;
+        font-size: 20px;
+        transition: 0.1s;
+      }
+
+      .container .switch-buttons input[type="button"]:focus {
+        color: white;
+        border-bottom: 2px solid white;
+      }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-form">
+      <h2>Login</h2>
+      <input type="text" class="box" placeholder="name">
+      <input type="password" class="box" placeholder="password">
+      <button type="button" name="button">Login</button>
+    </div>
+    <div class="sign-up-form">
+      <h2>Sign Up</h2>
+      <input type="text" class="box" placeholder="name">
+      <input type="text" class="box" placeholder="e-mail">
+      <input type="password" class="box" placeholder="password">
+      <button type="button" name="button">Sign Up</button>
+    </div>
+  </div>
+  <div class="switch-buttons">
+    <input type="button" class="switch-login" value="Login">
+    <input type="button" class="switch-sign-up" value="Sign Up">
+  </div>
+<script>
+
+  window.onload = function() {
+    var btn_login = document.getElementsByClassName('switch-login');
+    var btn_sign_up = document.getElementsByClassName('switch-sign-up');
+
+    btn_sign_up[0].addEventListener('click', function(event) {
+      document.getElementsByClassName('sign-up-form')[0].style.transform = 'translateX(255px)';
+      document.getElementsByClassName('login-form')[0].style.transform = 'translateX(0px)';
+    })
+
+    btn_login[0].addEventListener('click', function(event) {
+      document.getElementsByClassName('sign-up-form')[0].style.transform = 'translateX(0px)';
+      document.getElementsByClassName('login-form')[0].style.transform = 'translateX(-255px)';
+    })
+
+
+
+  }
+
+</script>
+</body>
+</html>

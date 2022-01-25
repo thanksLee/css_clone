@@ -1,0 +1,54 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* Grid Practice */
+
+.parent:nth-child(1) {
+  border: 5px solid #000;
+  background-color: khaki;
+  height: 300px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.parent div {
+  background-color: hotpink;
+  text-align: center;
+  color: #fff;
+  font-style: 30px;
+}
+
+.parent:nth-child(1) div {
+  width: 100px;
+  height: 100px;
+}
+
+.parent:nth-child(2) {
+  border: 5px solid #000;
+  background-color: khaki;
+  height: 300px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.parent:nth-child(1) div:nth-child(2) {
+  justify-self: end;
+  align-self: end;
+}
+
+.parent:nth-child(2) div:nth-child(2) {
+  justify-self: stretch;
+  align-self: stretch;
+}
