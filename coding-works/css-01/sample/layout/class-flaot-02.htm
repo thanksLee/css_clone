@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>class-float-02</title>
+  <style>
+    .container {
+      border: 2px solid blue;
+      width: 900px;
+      margin: auto;
+    }
+    header {
+      border: 2px solid red;
+      height: 150px;
+      text-align: center;
+      line-height: 150px;
+    }
+    .inner div {
+      border: 2px solid green;
+      padding: 20px;
+      width: 300px;
+      height: 300px;
+      float: left;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 300px;
+    }
+    footer {
+      border: 2px solid orange;
+      height: 100px;
+      clear: both;
+      text-align: center;
+      line-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+    <div class="inner">
+      <div>Section1</div>
+      <div>Section2</div>
+      <div>Section3</div>
+    </div>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-class-02</title>
+    <style>
+        .paging a {
+            border: 1px solid gray;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            margin-right: 5px;
+            color: #000;
+            text-decoration: none; /* 밑줄 없앰 */
+            text-align: center;
+            line-height: 25px;
+        }
+
+        .paging a:focus,
+        .paging a:hover {
+            border: 1px solid crimson;
+            background-color: crimson;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="paging">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#">10</a>
+    </div>
+</body>
+</html>

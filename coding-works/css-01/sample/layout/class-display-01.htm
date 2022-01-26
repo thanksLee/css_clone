@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>class-display-01 - 레이아웃 스타일</title>
+  <style>
+    div {
+      width: 300px;
+      height: 50px;
+      background-color: crimson;
+      margin: 20px;
+      /*
+         가로로 하는 표시히는 것이지만 다르다.
+         float: left; - 하위까지 영향을 줌
+         display: inline-block; - 해당 테그에만 영향을 준다.
+       */
+      display: inline-block;
+    }
+
+    a {
+      margin: 20px;
+      border: 1px solid red;
+    }
+
+    img {
+      width: 100px;
+      display: flex;
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- block element -->
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <br>
+
+  <!-- inline element -->
+  <a href="">인라인 엘리먼트</a>
+  <a href="">인라인 엘리먼트</a>
+  <a href="">인라인 엘리먼트</a>
+  <a href="">인라인 엘리먼트</a>
+  <br>
+  <br>
+
+  <img src="https://blog.kakaocdn.net/dn/b8pU3g/btqFOMWEtk4/DS8aILLcTv63NYCxpoZeCK/img.png">
+  <img src="https://blog.kakaocdn.net/dn/b8pU3g/btqFOMWEtk4/DS8aILLcTv63NYCxpoZeCK/img.png">
+  <img src="https://blog.kakaocdn.net/dn/b8pU3g/btqFOMWEtk4/DS8aILLcTv63NYCxpoZeCK/img.png">
+</body>
+</html>

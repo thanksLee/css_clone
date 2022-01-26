@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>class-layout-01</title>
+  <style>
+    .wrapper1 {
+      display: flex;
+
+      /*
+      display: table;
+      width: 100%;
+      */
+
+    }
+    .main1,
+    .side1 {
+      font-size: 30px;
+      text-align: center;
+      height: 300px;
+      color: white;
+      line-height: 300px;
+      float: left;
+      /*
+        display: table-cell;
+      */
+    }
+
+    .main1 {
+      background-color: blue;
+      /*width: calc(100% - 300px);*/
+      flex: 1;
+
+      width: -webkit-calc(100% - 300px);
+      width: -moz-calc(100% - 300px);
+      width: -o-calc(100% - 300px);
+      width: -ms-calc(100% - 300px);
+    }
+    .side1 {
+      background-color: red;
+      width: 300px;
+    }
+
+    .wrapper2 {
+      display: table;
+      width: 100%;
+
+    }
+    .main2,
+    .side2 {
+      font-size: 30px;
+      text-align: center;
+      height: 300px;
+      color: white;
+      line-height: 300px;
+      float: left;
+        display: table-cell;
+    }
+
+    .main2 {
+      background-color: blue;
+      /*width: calc(100% - 300px);*/
+
+      width: -webkit-calc(100% - 300px);
+      width: -moz-calc(100% - 300px);
+      width: -o-calc(100% - 300px);
+      width: -ms-calc(100% - 300px);
+    }
+    .side2 {
+      background-color: red;
+      width: 300px;
+    }
+
+    .main3,
+    .side3 {
+      font-size: 30px;
+      text-align: center;
+      height: 300px;
+      color: white;
+      line-height: 300px;
+      float: left;
+    }
+
+    .main3 {
+      background-color: blue;
+      width: calc(100% - 300px);
+
+      width: -webkit-calc(100% - 300px);
+      width: -moz-calc(100% - 300px);
+      width: -o-calc(100% - 300px);
+      width: -ms-calc(100% - 300px);
+    }
+    .side3 {
+      background-color: red;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper1">
+    <div class="main1">Main</div>
+    <div class="side1">Side</div>
+  </div>
+
+  <div class="wrapper2">
+    <div class="main2">Main</div>
+    <div class="side2">Side</div>
+  </div>
+
+  <div class="wrapper3">
+    <div class="main3">Main</div>
+    <div class="side3">Side</div>
+  </div>
+
+</body>
+</html>

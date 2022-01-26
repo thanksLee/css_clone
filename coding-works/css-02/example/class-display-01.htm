@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class-display-01</title>
+    <style>
+        body {
+            height: 100vh;
+
+            /*
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            */
+
+            /*
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            */
+
+            /*
+            display: grid;
+            place-items: center;
+            */
+
+            text-align: center;
+        }
+
+        .element {
+            border: 5px solid red;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            display: inline-block;
+
+            /*
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            */
+            /*
+            margin: auto;
+            */
+        }
+
+        .element span {
+            border: 3px solid black;
+            display: inline;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="element">
+        <span> This is Content </span>
+    </div>
+</body>
+</html>

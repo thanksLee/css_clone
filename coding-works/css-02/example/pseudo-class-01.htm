@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-class-01</title>
+    <style>
+        .box div {
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 10px;
+        }
+
+        .box div:first-child {
+            background-color: red;
+        }
+
+        .box div:nth-child(2) {
+            background-color: yellow;
+        }
+
+        .box div:nth-child(3) {
+            background-color: green;
+        }
+
+        .box div:last-child {
+            background-color: aqua;
+        }
+
+        .box1 div {
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 10px;
+        }
+
+        .box1 div:first-of-type {
+            background-color: red;
+        }
+
+        .box1 div:nth-of-type(2) {
+            background-color: yellow;
+        }
+
+        .box1 div:nth-of-type(3) {
+            background-color: green;
+        }
+
+        .box1 div:last-of-type {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>나는 제모입니다.</h1>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <h1>나는 제모입니다.</h1>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="box1">
+        <h1>나는 제모입니다.</h1>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <h1>나는 제모입니다.</h1>
+    </div>
+</body>
+</html>

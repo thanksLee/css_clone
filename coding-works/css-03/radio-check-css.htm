@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>체크박스/라디오버튼 디자인 바꾸기</title>
+  <style>
+    input[type=checkbox] {
+      display: none;
+    }
+
+    label > em {
+
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: url(https://www.nicepng.com/png/full/22-229587_nuget-gallery-packages-matching-ios-checkbox-png.png) no-repeat;
+      background-position: left center;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    input[type=checkbox]:checked + label em {
+      background-position: right center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="custom-checkbox">
+    <input type="checkbox" id="chk1">
+    <label for="chk1"><em></em>동의합니다.</label>
+  </div>
+  <div class="custom-checkbox1">
+    <label>
+      <input type="checkbox">동의합니다.
+    </label>
+  </div>
+</body>
+</html>

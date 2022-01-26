@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pseudo-class-03</title>
+  <style>
+    .ul1 ul {
+      list-style: decimal;
+    }
+
+    .ul1 ul li.new:after {
+      content: 'new';
+      background-color: dodgerblue;
+      color: #fff;
+      border-radius: 3px;
+      font-size: 12px;
+      padding: 0 5px;
+      margin-left: 5px;
+    }
+
+    .ul1 ul li.hot:before {
+      content: 'hot';
+      background-color: red;
+      color: #fff;
+      border-radius: 3px;
+      font-size: 13px;
+      padding: 0 5px;
+      margin-right: 5px;
+    }
+
+    .ul2 ul li:after {
+      content: '주문불가';
+      color: crimson;
+      font-size: 10px;
+      margin-left: 5px;
+    }
+
+    .ul2 ul {
+      list-style: none;
+    }
+
+    .ul2 ul li:before {
+      content: '*';
+      margin-right: 5px;
+      color: dodgerblue;
+    }
+
+    .breadcumb a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .breadcumb a:after {
+      content: '>';
+    }
+
+    .breadcumb a:last-child:after {
+      content: '';
+    }
+
+    .breadcumb a:last-child {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="ul1">
+    <ul>
+      <li class="new">빅치킨 마요 - 3,500원</li>
+      <li>도치마요 - 3,500원</li>
+      <li>치킨 샐러드마요 - 3,400원</li>
+      <li class="hot">치킨 마요 - 2,900원</li>
+    </ul>
+  </div>
+  <div class="ul2">
+    <ul>
+      <li>마요</li>
+      <li>카레</li>
+      <li>철판볶음밥</li>
+      <li>프리미엄 찌개</li>
+      <li>덮밥</li>
+      <li>비빔밥</li>
+    </ul>
+  </div>
+
+  <div class="breadcumb">
+    <a href="">홈</a>
+    <a href="">전체 메뉴</a>
+    <a href="">시각 도시락</a>
+    <a href="">모둠 시리즈</a>
+  </div>
+</body>
+</html>

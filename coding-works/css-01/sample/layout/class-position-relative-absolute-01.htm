@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class-position-relative-absolute</title>
+    <style>
+        body {
+            margin: 0;
+            /* body에서는 position이 적용되지 않는다.
+            position: relative;
+             */
+        }
+
+        .box-child {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-child"></div>
+</body>
+</html>
