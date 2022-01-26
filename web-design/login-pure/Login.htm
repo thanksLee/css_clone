@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login-PURE</title>
+  <link rel="stylesheet" href="../common.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      transition: all 0.3s linear;
+    }
+    body {
+      overflow: hidden;
+      min-height: 100vh;
+      background: #333;
+    }
+
+    .container {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(45deg, #333 70%, #5c5cd6 20%);
+    }
+
+    .side-image > img {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      z-index: 2;
+      width: 600px;
+    }
+
+    form {
+      height: 400px;
+      width: 350px;
+      margin-left: 200px;
+      box-shadow: 0 0 10px #000;
+      border-radius: 10px;
+      text-align: center;
+      color: #5c5cd6;
+    }
+
+    form h2 {
+      padding: 20px;
+      line-height: 70px;
+      font-size: 30px;
+    }
+
+    form .box {
+      height: 50px;
+      width: 80%;
+      margin-top: 25px;
+      padding: 0 20px;
+      background: none;
+      outline: none;
+      border: none;
+      caret-color: #5c5cd6;
+      border-bottom: 2px solid #5c5cd6;
+      color: white;
+    }
+
+    form i {
+      margin-top: 40px;
+      padding: 2px 0 0 10px;
+    }
+
+    form a {
+      line-height: 50px;
+      float: right;
+      color: orange;
+      padding: 0 30px;
+    }
+
+    form .btn {
+      color: white;
+      margin-top: 25px;
+      height: 45px;
+      width: 90%;
+      background: #5c5cd6;
+      border: none;
+      outline: none;
+      font-style: 18px;
+      cursor: pointer;
+      border-radius: 50px;
+    }
+
+    form .btn:hover {
+      opacity: 0.6;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .controls {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
+
+    .controls > label {
+      display: block;
+      height: 40px;
+      width: 100px;
+      box-shadow: 0 0 5px #000 inset;
+      border-radius: 50px;
+      position: relative;
+    }
+
+    .controls > label::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      height: 32px;
+      width: 32px;
+      background: #f7f7f7;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #switch:checked ~ .controls > label::before {
+      left: 63px;
+      background: #333;
+    }
+
+    #switch:checked ~ .controls > label {
+      background: #f7f7f7;
+    }
+
+    #switch:checked ~ .container {
+      background: linear-gradient(45deg, #f7f7f7 80%, #5c5cd6 20%)
+    }
+
+    #switch:checked ~ .container > form > .box {
+      color: black;
+    }
+
+
+    @media (max-width:1300px) {
+      .side-image > img {
+        width: 400px;
+      }
+
+      form {
+        margin-left: 0;
+      }
+    }
+
+    @media(max-width:1120px) {
+      .side-image > img {
+        display: none;
+      }
+    }
+
+    @media(max-width:600px) {
+      .container {
+        background: #333;
+      }
+
+      .container {
+        background: #f7f7f7;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="switch">
+
+  <div class="controls">
+    <label for="switch"></label>
+  </div>
+
+  <div class="side-image">
+    <!-- https://undraw.co/search -->
+    <img src="form.svg" alt="">
+  </div>
+  <div class="container">
+    <form>
+        <h2>Login From</h2>
+        <i class="fas fa-user"></i><input type="text" placeholder="username" class="box">
+        <i class="fas fa-lock"></i><input type="password" placeholder="password" class="box">
+        <a href="#">Forget password?</a>
+        <input type="button" value="Login" class="btn">
+    </form>
+  </div>
+</body>
+</html>
