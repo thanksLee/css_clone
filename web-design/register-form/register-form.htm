@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Form</title>
+  <link rel="stylesheet" href="../common.css">
+  <script src="../jquery-3.6.0.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      transition: all .3s linear;
+    }
+
+    body {
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .container {
+      height: 100vh;
+      width: 50%;
+      background: white;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      float: left;
+    }
+
+    form {
+      height: 500px;
+      width: 300px;
+      background: #ff3300;
+      border-radius: 10px;
+      line-height: 60px;
+      text-align: center;
+      color: white;
+    }
+
+    form h2 {
+      line-height: 100px;
+    }
+
+    form input {
+      height: 40px;
+      width: 80%;
+      padding: 0 20px;
+    }
+
+    form select {
+     height: 30px;
+     width: 160px;
+     cursor: pointer;
+     padding: 0 10px;
+    }
+
+    form .btn {
+      border-radius: 50px;
+      color: #ff3300;
+      background: white;
+      font-size: 16px;
+      font-weight: bolder;
+      cursor: pointer;
+      margin-top: 25px;
+    }
+
+    form .btn:hover {
+      opacity: .7;
+    }
+
+    .demo {
+      height: 100vh;
+      width: 50%;
+      background: #ff3300;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      float: left;
+    }
+
+    .wrapper {
+      height: 300px;
+      width: 400px;
+      background: white;
+      line-height: 30px;
+      box-shadow: 0 0 15px #333;
+      border-radius: 14px;
+    }
+
+    .wrapper h2 {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .wrapper p {
+      padding: 5px;
+      line-height: 40px;
+    }
+
+    .wrapper p span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form >
+      <h2>Register Form</h2>
+      <input type="text" placeholder="usernamer" class="name">
+      <input type="text" placeholder="email" class="email">
+      <input type="password" placeholder="password" class="password">
+      <input type="text" placeholder="age" class="age">
+      <strong>Contry: </strong>
+      <select class="country">
+        <option>India</option>
+        <option>USA</option>
+        <option>Japan</option>
+        <option>Rusia</option>
+      </select>
+      <input type="button" value="Resgister" class="btn">
+    </form>
+  </div>
+  <div class="demo">
+    <div class="wrapper">
+      <h2>Welcome</h2>
+      <p class="name">Mr. <span></span></p>
+      <p class="email">Your Email: <span></span></p>
+      <p class="age">Your Age: <span></span></p>
+      <p class="country">From: <span></span></p>
+    </div>
+  </div>
+<script type="text/javascript">
+  $('form .name').change(function() {
+    let value = $(this).val();
+    $('.demo .name').children('span').text(value);
+  })
+
+  $('form .email').change(function() {
+    let value = $(this).val();
+    $('.demo .email').children('span').text(value);
+  })
+
+  $('form .age').change(function() {
+    let value = $(this).val();
+    $('.demo .age').children('span').text(value);
+  })
+  $('form .country').change(function() {
+    let value = $(this).val();
+    $('.demo .country').children('span').text(value);
+  })
+</script>
+</body>
+</html>
