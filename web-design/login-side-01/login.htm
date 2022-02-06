@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side Login</title>
+  <script src="../jquery-3.6.0.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../common.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      transition: all .2s ease;
+    }
+
+    :root {
+      --color: #c272cf;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      height: 100vh;
+      background: url(./images/Vector.png) no-repeat;
+      background-size: 100% 25%;
+      background-position: top;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 19rem auto;
+    }
+
+    .form-container {
+      display: flex;
+      align-items: center;
+      height: 40rem;
+      width: 33rem;
+      overflow: hidden;
+    }
+
+    form {
+      height: 35rem;
+      width: 30rem;
+      margin-left: 2rem;
+      display: grid;
+      place-items: center;
+      border: 1px solid #ccc;
+      box-shadow: 9px 9px 0px var(--color);
+      border-radius: 1rem;
+      background: #fff;
+    }
+
+    form i {
+      font-size: 3rem;
+      columns: var(--color);
+      margin-top: -4rem;
+      background: #fff;
+      height: 6rem;
+      width: 6rem;
+      text-align: center;
+      border: 1rem solid #fff;
+    }
+
+    form h2 {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    form .box {
+      height: 3rem;
+      width: 80%;
+      padding: 0 2rem;
+      outline: none;
+      background: #e6e6e6;
+      color: #333;
+      border-radius: 5rem;
+    }
+
+    form input[type="submit"] {
+      height: 3rem;
+      width: 6rem;
+      margin-left: -15rem;
+      background: #333;
+      color: #fff;
+      border: none;
+      outline: none;
+      border-radius: 5rem;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background: var(--color);
+    }
+
+    form a {
+      font-size: 1.5rem;
+      color: #333;
+      margin-left: -11rem;
+    }
+
+    .container .images {
+      width: 36rem;
+      display: flex;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    .container .images > img {
+      height: 35rem;
+      margin-top: 1rem;
+      margin-left: -18rem;
+    }
+
+    .controls {
+      position: absolute;
+      top: 10rem; right: 20%;
+      height: 6rem;
+      width: 15rem;
+      overflow: hidden;
+    }
+
+    .controls h1 {
+      color: #fff;
+      border: .2rem solid #fff;
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+      border-radius: 5rem;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    @media (max-width:750px) {
+      .container .images > img {
+        display: none;
+      }
+
+      .container .images {
+        width: 0;
+      }
+
+      .container {
+        justify-content: center;
+        margin-top: 25rem;
+      }
+      .controls {
+        right: 10%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      html {
+        font-size: 50%;
+      }
+
+      body {
+        background-size: 100% 20%;
+      }
+
+      .container {
+        margin-top: 30rem;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="controls">
+    <h1 id="sign-up">Sign Up</h1>
+    <h1 id="sign-in">Sign In</h1>
+  </div>
+  <div class="container">
+    <div class="form-container">
+      <div class="sign-in">
+        <form>
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="username" class="box">
+          <input type="password" placeholder="password" class="box">
+          <input type="submit" value="Sign In">
+          <a href="#">Forget password:</a>
+        </form>
+      </div>
+      <div class="sign-up">
+        <form>
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="username" class="box">
+          <input type="email" placeholder="e-mail" class="box">
+          <input type="password" placeholder="password" class="box">
+          <input type="submit" value="Sign up">
+          <a href="#">Forget password:</a>
+        </form>
+      </div>
+    </div>
+    <div class="image-container">
+      <div class="images">
+        <img src="./images/Mobile login-amico.svg">
+        <img src="./images/Login-rafiki.svg">
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#sign-up').click(function() {
+      $('.sign-in').css('margin-left', '-34rem');
+      $(this).css('margin-top', '-5rem');
+      $('.images > img').css('margin-left', '0rem');
+    });
+    $('#sign-in').click(function() {
+      $('.sign-in').css('margin-left', '0rem');
+      $('#sign-up').css('margin-top', '1rem');
+      $('.images > img').css('margin-left', '-18rem');
+    });
+  })
+</script>
+</body>
+</html>

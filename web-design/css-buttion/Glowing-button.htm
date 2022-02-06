@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowing Button</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100vh;
+      background: #1a1a1a;
+    }
+
+    button {
+      outline: none;
+      height: 60px;
+      width: 160px;
+      border: 3px solid white;
+      border-radius: 50px;
+      margin: 50px;
+      background: none;
+      color: white;
+      letter-spacing: 4px;
+      font-weight: bolder;
+      font-size: 20px;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    button:nth-child(1):hover {
+      box-shadow: 0px 0px 25px white,
+                  0px 0px 15px white inset;
+      text-shadow: 0px 0px 10px white;
+      -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+    }
+
+    button:nth-child(2):hover {
+      color: blue;
+      border-color: blue;
+      box-shadow: 0px 0px 25px blue,
+                  0px 0px 15px blue inset;
+      text-shadow: 0px 0px 10px blue;
+      -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+    }
+
+
+    button:nth-child(3):hover {
+      color: red;
+      border-color: red;
+      box-shadow: 0px 0px 25px red,
+                  0px 0px 15px red inset;
+      text-shadow: 0px 0px 10px red;
+      -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+    }
+
+    button:nth-child(4):hover {
+      color: red;
+      border-color: red;
+      box-shadow: 0px 0px 25px red,
+                  0px 0px 15px red inset;
+      text-shadow: 0px 0px 10px red;
+      -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button type="button" name="button1">BUTTON</button>
+    <button type="button" name="button1">BUTTON</button>
+    <button type="button" name="button1">BUTTON</button>
+    <button type="button" name="button1">BUTTON</button>
+    <button type="button" name="button1">BUTTON</button>
+    <button type="button" name="button1">BUTTON</button>
+    <button type="button" name="button1">BUTTON</button>
+    <button type="button" name="button1">BUTTON</button>
+    <button type="button" name="button1">BUTTON</button>
+    <button type="button" name="button1">BUTTON</button>
+  </div>
+</body>
+</html>
